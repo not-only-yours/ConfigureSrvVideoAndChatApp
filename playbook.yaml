@@ -1,0 +1,10 @@
+- hosts: all
+  become: yes
+  roles:
+    - role: docker
+    - role: jenkins
+      when: inventory_hostname in groups['My_Group']
+    - role: slave
+      when: inventory_hostname in groups['Slave']
+    - role: SSHConnection
+
