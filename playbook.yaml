@@ -1,6 +1,10 @@
 - hosts: all
   become: yes
   roles:
+<<<<<<< HEAD
+    - { role: docker }
+    - { role: jenkins }
+=======
     - role: docker
     - role: jenkins
       when: inventory_hostname in groups['My_Group']
@@ -8,3 +12,4 @@
       when: inventory_hostname in groups['Slave']
     - role: SSHConnection
 
+>>>>>>> bfe1d92 (created all roles for proxy and application containers)

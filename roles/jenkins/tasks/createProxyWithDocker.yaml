@@ -9,7 +9,7 @@
 - name: copy nginx config file
   copy: src=/Users/nikita_dir/Documents/projects/NikitaAnsible/roles/jenkins/files/vhost.conf dest=/opt/nginx/vhost.conf
 
-- name: pull nginx image
+- name: pull jenkins image
   docker_image:
     name: nginx:stable
     source: pull
@@ -27,5 +27,5 @@
 
     volumes:
       - /opt/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
-      - /etc/letsencrypt/live/jenkins.nikitasdomain.tk/fullchain.pem:/etc/letsencrypt/live/jenkins.nikitasdomain.tk/jenkins.nikitasdomain.tk.crt
-      - /etc/letsencrypt/live/jenkins.nikitasdomain.tk/privkey.pem:/etc/letsencrypt/live/jenkins.nikitasdomain.tk/jenkins.nikitasdomain.tk.key
+      - /etc/letsencrypt/live/nikitasdomain.tk/fullchain.pem:/etc/letsencrypt/live/nikitasdomain.tk/nikitasdomain.tk.crt
+      - /etc/letsencrypt/live/nikitasdomain.tk/privkey.pem:/etc/letsencrypt/live/nikitasdomain.tk/nikitasdomain.tk.key

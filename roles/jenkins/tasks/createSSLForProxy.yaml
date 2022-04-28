@@ -5,7 +5,7 @@
 
 
 - name: generation of serts
-  shell: certbot certonly --standalone -d jenkins.nikitasdomain.tk --staple-ocsp -m darty@nikitasdomain.tk --agree-tos
+  shell: certbot certonly --standalone -d nikitasdomain.tk --staple-ocsp -m darty@nikitasdomain.tk --agree-tos
 #
 #- name: check file
 #  stat:
