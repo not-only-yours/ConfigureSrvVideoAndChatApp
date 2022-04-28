@@ -1,2 +1,3 @@
 .idea
 ./roles/slave/files/cloudflare.ini
+.DS_Store
